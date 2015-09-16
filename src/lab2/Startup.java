@@ -4,12 +4,19 @@
 package lab2;
 
 /*  
- *  
- *  
- *  
- *  
+ *  5. In the startup class document what you think is good or bad about this
+ *  architecture from the perspective of using abstraction and inheritance.
+ *------------------------------------------------------------------------
+ *  All three courses (Intro to programming, intro to java, and advanced java) "play the roll of" a programming course given this, the interface super class is properly implemented and is used to full benifit.
+
+ *  6. In your solution when can Liskov Substitution principle be used and when
+ *  is it not possible. Write down your answer by providing a comment in the
+ *  startup class.
+ *------------------------------------------------------------------------  
+ *  Just like the abstract class version, this version uses Liskov Substitution Principle (LSP)due to the reference to the base class is able to operate upon derivatives of that base class(without knowing it) - ProgrammingCourse -
  *
  * @ Scott
+ *
  */
 public class Startup {
 
@@ -17,33 +24,33 @@ public class Startup {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       IntroToProgrammingCourse course1 = new IntroToProgrammingCourse("Programming 101","2345");
-                                course1.setCredits(3.0);
-       
-       
-       System.out.println(course1.getCourseName() + " " +
-                          course1.getCourseNumber() + " " +
-                          course1.getCredits());  
-                          
-    
-    
-        IntroJavaCourse course2 = new IntroJavaCourse("Java 101","4567");
-                        course2.setCredits(3.5);
-                        course2.setPrerequisites("Intro to Programming");
-       
-            System.out.println(course2.getCourseName() + " " +
-                               course2.getCourseNumber() + " " +
-                               course2.getCredits() + " " + 
-                               course2.getPrerequisites());
+        ProgrammingCourse course1 = new IntroToProgrammingCourse();
+        
+        ProgrammingCourse course2 = new IntroJavaCourse();
+        
+        ProgrammingCourse course3 = new AdvancedJavaCourse();
 
+        System.out.println("These are the Programming Courses offered");
+        
+        System.out.println("-------------------");
+        
+        System.out.println("Course Name: " + course1.CourseName());
+        System.out.println("Course Number: " + course1.CourseNumber());
+        System.out.println("Course Credits: " + course1.CourseCredits());
+        System.out.println("Prerequisites: " + course1.Prerequisites());
 
-        AdvancedJavaCourse course3 = new AdvancedJavaCourse("Java 201","7890");
-                           course3.setCredits(4.0);
-                           course3.setPrerequisites("Intro Java");
-       
-            System.out.println(course3.getCourseName() + " " +
-                               course3.getCourseNumber() + " " +
-                               course3.getCredits() + " " + 
-                               course3.getPrerequisites());
+        System.out.println("-------------------");
+
+        System.out.println("Course Name: " + course2.CourseName());
+        System.out.println("Course Number: " + course2.CourseNumber());
+        System.out.println("Course Credits: " + course2.CourseCredits());
+        System.out.println("Prerequisites: " + course2.Prerequisites());
+
+        System.out.println("-------------------");
+
+        System.out.println("Course Name: " + course3.CourseName());
+        System.out.println("Course Number: " + course3.CourseNumber());
+        System.out.println("Course Credits: " + course3.CourseCredits());
+        System.out.println("Prerequisites: " + course3.Prerequisites());
     }
 }

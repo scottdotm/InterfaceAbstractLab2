@@ -9,44 +9,27 @@ package lab2;
 public class IntroJavaCourse implements ProgrammingCourse {
     private String courseName;
     private String courseNumber;
-    private double credits;
+    private double courseCredits;
     private String prerequisites;
 
-    public IntroJavaCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
-    }
-
-    public String getCourseNumber() {
-        return courseNumber;
-    }
-    
-    public String getCourseName() {
+    public final String CourseName() {
+        courseName = "Intro to Java";
         return courseName;
     }
 
-    public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
-    }
-    
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
+    public final String CourseNumber() {
+        courseNumber = "101-5";
+        return courseNumber;
     }
 
-    public double getCredits() {
-        return credits;
+    public final double CourseCredits() {
+        courseCredits = 3.5;
+        return courseCredits;
     }
 
-    public void setCredits(double credits) {
-        this.credits = credits;
-    }
-
-    public String getPrerequisites() {
+    public final String Prerequisites() {
+        prerequisites = "Intro to programming";
         return prerequisites;
-    }
-
-    public void setPrerequisites(String prerequisites) {
-        this.prerequisites = prerequisites;
     }
 
     
