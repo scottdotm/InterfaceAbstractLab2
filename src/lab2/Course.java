@@ -7,7 +7,7 @@ package lab2;
  *
  * @ Scott
  */
-public interface ProgrammingCourse {
+public interface Course {
     public abstract String CourseName();
 
     public abstract String CourseNumber();

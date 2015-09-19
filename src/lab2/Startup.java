@@ -24,11 +24,11 @@ public class Startup {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ProgrammingCourse course1 = new IntroToProgrammingCourse();
+        Course course1 = new IntroToProgrammingCourse();
         
-        ProgrammingCourse course2 = new IntroJavaCourse();
+        Course course2 = new IntroJavaCourse();
         
-        ProgrammingCourse course3 = new AdvancedJavaCourse();
+        Course course3 = new AdvancedJavaCourse();
 
         System.out.println("These are the Programming Courses offered");
         
